@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -24,7 +25,7 @@ export default function Home() {
       <Head>
         <title>Pokemon App</title>      
       </Head>
-      <h2>POKEMONS</h2>
+      <h2 className={styles.h2}>POKEMONS</h2>
       <div className={styles.grid}>
       {pokemon.map((pokemon)=> (
         <div className={styles.card} key={pokemon.id}>
@@ -39,8 +40,7 @@ export default function Home() {
         </Link>
         </div>      
       ))}
-      </div>   
-   
+      </div>  
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

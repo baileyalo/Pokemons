@@ -3,10 +3,37 @@ import React, {useState, useEffect} from "react";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/Details.module.css";
+import {useRouter} from "next/router";
 
 
 
 export default function Details() {
+  
+  const {
+         query:{id},
+        } =useRouter();
+
+  const[pokemon, setPokenmon]= useState(null);
+
+  useEffect(()=> {
+    async function getPoke(){
+      const res = await fetch (
+        `https://jherr-pokemon.s3.us-west-1.amazonaws.com/pokemon/${id}.json`
+      );
+      setPokenmon(await res.json());
+    }
+
+    if (id){
+        getPoke();
+    }
+  
+  }, [id]);
+
+  if (!pokemon){
+    return null;
+  }
+
+
     return (
       <div>
         <Head>

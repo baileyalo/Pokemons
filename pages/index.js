@@ -44,13 +44,13 @@ export default function Home() {
       </div>  
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://www.netlify.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/netlify.svg" alt="Netlify Logo" width={72} height={16} />
+            <Image src="/netlify.svg" alt="Netlify Logo" width={100} height={70} />
           </span>
         </a>
       </footer>

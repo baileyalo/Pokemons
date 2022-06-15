@@ -21,6 +21,7 @@ export default function Details() {
         `https://jherr-pokemon.s3.us-west-1.amazonaws.com/pokemon/${id}.json`
       );
       setPokenmon(await res.json());
+     // console.log(res)
     }
 
     if (id){

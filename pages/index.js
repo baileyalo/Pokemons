@@ -30,7 +30,7 @@ export default function Home() {
       <div className={styles.grid}>
       {pokemon.map((pokemon)=> (
         <div className={styles.card} key={pokemon.id}>
-        <Link href = {`/pokemon/${pokemon.id}`}>
+        <Link href = {`/component/${pokemon.id}`}>
           <a>
             <img
             src = {`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}

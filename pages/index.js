@@ -26,6 +26,7 @@ export default function Home() {
         <title>Pokemon App</title>      
       </Head>
       <h2 className={styles.h2}>POKEMONS</h2>
+      <br/>
       <div className={styles.grid}>
       {pokemon.map((pokemon)=> (
         <div className={styles.card} key={pokemon.id}>
